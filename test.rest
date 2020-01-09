@@ -1,0 +1,50 @@
+## CATEGORY
+
+### LIST
+GET http://localhost:5000/api/v1/categories
+
+### DETAIL
+GET http://localhost:5000/api/v1/category/1578552121000j71bydzlk5b
+
+### SAVE
+POST http://localhost:5000/api/v1/category/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
+
+{
+    "name" : "test 4"
+}
+
+### UPDATE
+PUT http://localhost:5000/api/v1/category/1578552221000xq3t03x8d4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
+
+{
+    "name" : "test 5"
+}   
+
+### DELETE
+DELETE  http://localhost:5000/api/v1/category/1578556709000ptp0o4x6sjf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
+
+
+## AUTH
+### SIGNUP
+POST http://localhost:5000/api/v1/signup/
+Content-Type: application/json
+
+{
+    "fullname" : "Abdillah",
+    "email" : "abd.siunix01@gmail.com",
+    "password" : "12345678"
+}
+
+### SIGN
+POST http://localhost:5000/api/v1/sign/
+Content-Type: application/json
+
+{
+    "email" : "abd.siunix01@gmail.com",
+    "password" : "12345678"
+}
