@@ -15,6 +15,19 @@ module.exports = (sequelize, DataTypes) => {
   );
   user.associate = function(models) {
     // associations can be defined here
+    user.belongsToMany(
+      models.cource,
+      {
+        through: "courcelike",
+        as: "cource",
+        foreignKey: "userId"
+      },
+      {
+        through: "courcetransaction",
+        as: "cource",
+        foreignKey: "userId"
+      }
+    );
   };
   return user;
 };

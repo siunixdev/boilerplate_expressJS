@@ -1,3 +1,5 @@
+const Model = require("./models");
+const User = Model.user;
 const jwt = require("jsonwebtoken");
 const secretKey = "siunix";
 
@@ -28,9 +30,24 @@ exports.auth = (req, res, next) => {
       };
 
       return res.status(403).json(finalRes);
+    } else {
+      User.findAll({
+        where: {
+          id: user.id
+        }
+      }).then(data => {
+        if (!data.length) {
+          let finalRes = {
+            isSuccess,
+            message: "Unathorized",
+            data
+          };
+          res.status(401).json(finalRes);
+        } else {
+          req.userId = user.id;
+          next();
+        }
+      });
     }
-
-    req.user_id = user.id;
-    next();
   });
 };

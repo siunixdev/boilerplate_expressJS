@@ -156,7 +156,7 @@ exports.update = (req, res) => {
           data: []
         };
 
-        res.status(200).json(finalRes);
+        res.status(500).json(finalRes);
       } else {
         Category.update(
           {

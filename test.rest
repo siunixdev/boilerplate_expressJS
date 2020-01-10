@@ -12,7 +12,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
 
 {
-    "name" : "test 4"
+    "name" : "Other"
 }
 
 ### UPDATE
@@ -25,7 +25,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwO
 }   
 
 ### DELETE
-DELETE  http://localhost:5000/api/v1/category/1578556709000ptp0o4x6sjf
+DELETE  http://localhost:5000/api/v1/category/1578552221000xq3t03x8d4
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
 
 
@@ -37,7 +37,8 @@ Content-Type: application/json
 {
     "fullname" : "Abdillah",
     "email" : "abd.siunix01@gmail.com",
-    "password" : "12345678"
+    "password" : "12345678",
+    "roleId" : "teacher"
 }
 
 ### SIGN
@@ -46,5 +47,15 @@ Content-Type: application/json
 
 {
     "email" : "abd.siunix01@gmail.com",
-    "password" : "12345678"
+    "password" : "12345678",
+    "roleId" : "teacher"
 }
+
+## CATEGORY
+
+### TEACHERS
+GET http://localhost:5000/api/v1/teachers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE1Nzg1NTMwODEwMDA1a20xYWZhdjZxcSIsImlhdCI6MTU3ODU1ODI3MX0.C0u2qkvRAvKF-hXrXTHkgdJa-HeA6_G7HyUevXxKa4g
+
+### DETAIL
+GET http://localhost:5000/api/v1/category/1578552121000j71bydzlk5b
