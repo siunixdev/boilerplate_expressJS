@@ -17,7 +17,6 @@ const middleware = require("./middleware");
 
 // Controller
 const categoryController = require("./controller/category");
-const userController = require("./controller/user");
 const authController = require("./controller/auth");
 
 app.get("/", (req, res) => {
@@ -35,9 +34,6 @@ app.group("/api/v1", router => {
   router.post("/category", middleware.auth, categoryController.save);
   router.put("/category/:id", middleware.auth, categoryController.update);
   router.delete("/category/:id", middleware.auth, categoryController.delete);
-
-  // TEACHERS
-  router.get("/teachers", middleware.auth, userController.userfindAllTeacher);
 });
 
 app.listen(port, () => console.log(`Listing on port ${port}!`));
